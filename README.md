@@ -4,7 +4,10 @@ Part 1
 (A) Using a database design approach of your choice, produce a logical design for the database to support the information
     system, which is needed at PropertyPortal.
 
-    A set of normalised relations (10 marks) obtained through applying the normalisation process (10 marks) instead of ER modelling. You should make clear how the normalisation process has been carried out, and the reasoning employed, in particular quoting evidence (series of steps) to support the decisions made and how various relations have been derived. Each final relation in your answer should be in 3rd normal form.
+    A set of normalised relations (10 marks) obtained through applying the normalisation process (10 marks) instead of ER
+    modelling. You should make clear how the normalisation process has been carried out, and the reasoning employed, in
+    particular quoting evidence (series of steps) to support the decisions made and how various relations have been derived.
+    Each final relation in your answer should be in 3rd normal form.
 
 (B) Based on your logical design from Part 1 (A) and the information available in the scenario, produce an SQL script file
     using Oracle 11g/12c/19c.
