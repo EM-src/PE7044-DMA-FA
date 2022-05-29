@@ -1,6 +1,6 @@
 # PE7044 Final Assignment details
 
-Part 1 test
+Part 1
 (A) Using a database design approach of your choice, produce a logical design for the database to support the information
     system, which is needed at PropertyPortal.
 
