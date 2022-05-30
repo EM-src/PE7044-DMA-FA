@@ -20,9 +20,6 @@ AND   p.REGISTRATION_DATE > SYSDATE-42
 
 Rem PART2, QUESTION B, SUBQUESTION Q2
 
---Display details of properties sold in Newcastle, Sunderland, Gateshead
---or Cramlington between £195,000 and £375,000 in the years 2018 to 2022.
-
 SELECT ps.*
 FROM PROPERTY_SOLD ps, PROPERTY p
 WHERE ps.PROPERTY_ID = p.PROPERTY_ID
