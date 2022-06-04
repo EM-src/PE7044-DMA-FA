@@ -30,3 +30,7 @@ Part 3
 Select and justify any two entity types / relations of your choice which have relationships with each other and design and
 implement them using nested-relational and object-relational approach covered in this module. Your answer should include object
 types, object tables, data loading into object tables, and answering a suitable sample query.
+
+(B) Create a NOSQL subset of the PropertyPortal database using MongoDB. Select and justify any two entity types / relations of
+your choice which have relationships with each other and design and implement them using NOSQL database approach covered in
+this module. Your answer should include creating and populating collection(s) and answering a suitable sample query.
