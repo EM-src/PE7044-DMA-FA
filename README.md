@@ -24,3 +24,9 @@ Part 2
 
 (Q2)Display details of properties sold in Newcastle, Sunderland, Gateshead or Cramlington between £195,000 and £375,000 in
     the years 2018 to 2022.
+
+Part 3
+(A) Create an object-based subset of the PropertyPortal database using object- relational (O-R) features of Oracle 11g/12c/19c.
+Select and justify any two entity types / relations of your choice which have relationships with each other and design and
+implement them using nested-relational and object-relational approach covered in this module. Your answer should include object
+types, object tables, data loading into object tables, and answering a suitable sample query.
