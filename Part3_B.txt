@@ -1,0 +1,96 @@
+db.createCollection("w21050558_Branch_Staff_EMB")
+
+db.w21050558_Branch_Staff_EMB.insert(
+{_id: 1,
+ agent_id: 10,
+ address: "QUEENSWAY 5, FENHAM, NEWCASTLE",
+ contact_details: "+441234567898",
+ manager_id: 100,
+ staff:[{staff_id: 100, full_name: "JOHN CARREW", address: "NEWCASTLE RD 5, NEWCASTLE", contact_details: "+441234567816",
+         personal_details: "S", is_manager: "Y"},
+        {staff_id: 101, full_name: "CYNTHIA MOORE", address: "KINGS AVE 34, NEWCASTLE", contact_details: "+441234567817",
+          personal_details: "M", is_manager: "N"}]
+})
+
+db.w21050558_Branch_Staff_EMB.insert(
+{_id: 2,
+ agent_id: 10,
+ address: "HEATON RD 12, HEATON, NEWCASTLE",
+ contact_details: "+441234567899",
+ manager_id: 150,
+ staff:[{staff_id: 103, full_name: "BILBO BAGGINS", address: "THE SHIRE 4, MIDDLE EARTH", contact_details: "+441234567819",
+         personal_details: "S", is_manager: "N"}]
+})
+
+db.w21050558_Branch_Staff_EMB.insert(
+{_id: 3,
+ agent_id: 13,
+ address: "MOUNT RD 34, SUNDERLAND",
+ contact_details: "+441234567810",
+ manager_id: 145,
+ staff:[{staff_id: 102, full_name: "MAXIME BELLUS", address: "PORT ST 23, SUNDERLAND", contact_details: "+441234567818",
+         personal_details: "M", is_manager: "N"}]
+})
+
+db.w21050558_Branch_Staff_EMB.insert(
+{_id: 4,
+ agent_id: 10,
+ address: "RODSLEY AVE 77, GATESHEAD",
+ contact_details: "+441234567811",
+ manager_id: 112,
+ staff:[{staff_id: 102, full_name: "LEWIS BALFE", address: "GATESHEAD RD 1, GATESHEAD", contact_details: "+441234657842",
+         personal_details: "W", is_manager: "N"}]
+})
+
+db.w21050558_Branch_Staff_EMB.insert(
+{_id: 5,
+ agent_id: 12,
+ address: "NORA ST 5, SUNDERLAND",
+ contact_details: "+441234567812",
+ manager_id: 200,
+ staff:[{staff_id: 104, full_name: "MARTHA GUNNAR", address: "OLD TOWN ST 15, SUNDERLAND", contact_details: "+441234567820",
+         personal_details: "W", is_manager: "N"}]
+})
+
+db.w21050558_Branch_Staff_EMB.insert(
+{_id: 6,
+ agent_id: 14,
+ address: "NORTHUMBRIAN RD 85, CRAMLINGTON",
+ contact_details: "+441234567813",
+ manager_id: 333,
+ staff:[{staff_id: 105, full_name: "LENA ANDERSON", address: "CASTLE NEW AVE 99 CRAMLINGTON", contact_details: "+441234567821",
+         personal_details: "S", is_manager: "N"}]
+})
+
+db.w21050558_Branch_Staff_EMB.insert(
+{_id: 7,
+ agent_id: 15,
+ address: "BRISTOL ST 1, BRISTOL",
+ contact_details: "+441234567814",
+ manager_id: 334,
+ staff:[{staff_id: 106, full_name: "DANIEL WROE", address: "CIRCUS RD 13, BRISTOL", contact_details: "+441234567822",
+         personal_details: "M", is_manager: "N"},
+        {staff_id: 108, full_name: "EVITA RUSSEL", address: "LORIEN 23, BRISTOL", contact_details: "+441234567824",
+         personal_details: "S", is_manager: "N"}]
+})
+
+db.w21050558_Branch_Staff_EMB.insert(
+{_id: 8,
+ agent_id: 16,
+ address: "WINGROVE RD 45, FENHAM, NEWCASTLE",
+ contact_details: "+441234567815",
+ manager_id: 107,
+ staff:[{staff_id: 107, full_name: "NEIL MCBRIDE", address: "ADAM SMITH AVE 55, NEWCASTLE", contact_details: "+441234567823",
+         personal_details: "S", is_manager: "Y"}]
+})
+
+db.w21050558_Branch_Staff_EMB.find().pretty()
+
+
+// Project agent ID, branch address and contact details of branches plus all staff details except whether staff is manager or not,
+// for branches that have more than one employees or branches with Widowed staff
+
+db.w21050558_Branch_Staff_EMB.find(
+  {$or: [{staff: {$elemMatch: {personal_details: "W"}}}, {staff: {$size: 2}}] },
+  {_id: 0, manager_id: 0, "staff.is_manager": 0}
+).pretty()
